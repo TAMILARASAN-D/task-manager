@@ -1,0 +1,268 @@
+/* 🌟 Full Page Background */
+
+/* ✨ Title Styling - Adds Gradient Effect */
+.task-manager-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #4a90e2, #1abc9c);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* 📌 Task Input Section */
+.task-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* 🔹 Input Fields - Styled Without Changing Existing Cards */
+.task-input-container input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 250px;
+}
+
+.task-input-container input:focus {
+  border-color: #4a90e2;
+}
+
+/* 🎨 Add Task Button */
+.add-task-btn {
+  background: linear-gradient(to right, #4a90e2, #1abc9c);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Footer */
+.footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #444;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  font-weight: bold;
+}
+
+
+.task-manager-container {
+  background: linear-gradient(to bottom right, #f0f8ff, #e6e6fa);
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 📌 Tasks Grid - Ensures Proper Spacing */
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 90%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* 🎯 Task Card Styling */
+.task-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 🚀 Hover Effect */
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* 📅 Task Creation Date */
+.task-date {
+  font-size: 12px;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* ✅ Completed Task Watermark */
+.task-completed {
+  background-color: #e3f7e3 !important; /* Light green */
+  border-left: 6px solid #28a745 !important;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.task-completed::after {
+  content: "COMPLETED";
+  position: absolute;
+  padding:1.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1);
+  transform: rotate(-30deg);
+  top: 40%;
+  left: 10%;
+  z-index: 0;
+}
+
+/* 📅 Completed Date */
+.completed-date {
+  font-size: 12px;
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+
+/* ✅ Completed Task Styling
+.task-completed {
+  background-color: #e3f7e3 !important; /* Light green
+  border-left: 6px solid #28a745 !important;
+  opacity: 0.9;
+}*/
+
+/* ⏬ Hide edit & complete buttons for completed tasks */
+.task-completed .edit-btn,
+.task-completed .complete-btn {
+  display: none;
+}
+
+/* 🏷️ Task Title - Top Left */
+.task-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📝 Task Description - Bottom */
+.task-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* 🎨 Icons - Positioned at Top-Right */
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* 🟠 Edit Button */
+.edit-btn {
+  background-color: #ffdd57 !important;
+  color: black;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #e0b800 !important;
+}
+
+/* 🔴 Delete Button */
+.delete-btn {
+  background-color: #e74c3c !important;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b !important;
+}
+
+/* ✅ Complete Button */
+.complete-btn {
+  background-color: #2ecc71 !important;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.complete-btn:hover {
+  background-color: #27ae60 !important;
+}
+
+
+/* 🎯 Responsive Adjustments */
+@media (max-width: 768px) {
+  .task-list {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    max-width: 95vw; /* Ensure cards don't shrink too much */
+  }
+  .task-completed {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .task-completed::after {
+    content: "COMPLETED";
+    position: absolute;
+    padding:1.5rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1);
+    transform: rotate(-30deg);
+    top: 40%;
+    left: 10%;
+    z-index: 0;
+  }
+
+  .task-card {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .task-title {
+    font-size: 16px;
+  }
+
+  .task-description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .task-list {
+    max-width: 60vw; /* Prevents cards from stretching too much */
+  }
+}
